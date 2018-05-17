@@ -17,4 +17,11 @@ export class PostService {
   getPost(id: string) {
     return this.http.get(this.domain + '/post/' + id).map(res => res.json());
   }
+
+  createPost(post) {
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+    return this.http.post(this.domain + '/post', JSON.stringify(post), { headers: headers })
+      .map(res => res.json());
+  }
 }

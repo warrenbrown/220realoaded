@@ -1,7 +1,8 @@
 <h1>Post list page</h1>
  <div *ngFor="let post of posts">
   <a class="nav-link" routerLink="/post/{{post._id}}">
-      {{ post.title}}
+      <h3>
+        {{ post.title}}
+      </h3>
     </a>
-    <h4>{{ post._id }}</h4>
 </div>
