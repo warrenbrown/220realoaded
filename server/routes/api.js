@@ -19,7 +19,6 @@ router.get('/posts', (req, res) => {
 });
 
 router.post('/post', (req, res) => {
-  console.log('create a post');
   var newPost = new Post();
   newPost.title = req.body.title;
   newPost.body = req.body.body;

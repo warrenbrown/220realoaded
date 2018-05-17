@@ -10,6 +10,8 @@ const config = require('./config/database');
 const app = express();
 const port = 3000;
 
+app.use(cors({origin: 'http://localhost:4200' }));
+
 //connect to database
 mongoose.connect(config.uri, (err) => {
   if (err) {
@@ -24,8 +26,10 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/api', api);app.get('/', (req, res) => {
-  res.send('Welcome to my blog');
+app.use('/api', api);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname,'dist/index.html'));
 });
 
 app.listen(port);
