@@ -1,0 +1,22 @@
+.heading {
+  background: #a7a2a2;
+    padding: 0px 0 0 13px;
+    height: 40px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+.details {
+  margin-bottom: 8px;
+  border-bottom: solid .2px;
+}
+
+.logo-container {
+  width: 199px;
+  padding-left: 26px;
+}
+
+.social-wrapper {
+  border-top: solid 4px;
+    margin: 0 14px;
+}

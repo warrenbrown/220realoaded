@@ -10,6 +10,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { PostNewComponent } from './components/post-new/post-new.component';
 import { PostService } from './services/post.service';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PostService } from './services/post.service';
     AppComponent,
     PostListComponent,
     PostDetailComponent,
-    PostNewComponent
+    PostNewComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
